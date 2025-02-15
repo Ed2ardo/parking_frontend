@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://815f-186-155-15-36.ngrok-free.app/api/", // La base para todas las rutas
+  baseURL: "https://0d18-186-155-15-36.ngrok-free.app/api/", // La base para todas las rutas
   timeout: 5000,
   headers: {
     "Content-Type": "application/json",
@@ -37,7 +37,7 @@ axiosInstance.interceptors.response.use(
 
         //  Intentar renovar el token
         const response = await axios.post(
-          "http://127.0.0.1:8000/api/token/refresh/",
+          "https://0d18-186-155-15-36.ngrok-free.app/api/token/refresh/",
           { refresh: refreshToken }
         );
 

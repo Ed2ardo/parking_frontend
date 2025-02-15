@@ -15,7 +15,8 @@ function RegistroParqueoPage() {
     try {
       setLoading(true);
       const response = await axiosInstance.get("parqueo/registro-parqueo/");
-      setRegistros(response.data);
+      console.log("Datos recibidos:", response.data); // 👀 Verifica qué llega
+      setRegistros(Array.isArray(response.data) ? response.data : []);
     } catch (error) {
       console.error("Error al obtener los registros:", error);
     } finally {
