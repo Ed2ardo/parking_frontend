@@ -15,7 +15,8 @@ function RegistroParqueoForm({ fetchRegistros }) {
     const fetchTiposVehiculo = async () => {
       try {
         const response = await axiosInstance.get("core/tipos-vehiculos/");
-        setTiposVehiculo(response.data);
+        console.log("Tipos de Vehículo recibidos:", response.data);
+        setTiposVehiculo(Array.isArray(response.data) ? response.data : []);
       } catch (error) {
         console.error("Error al obtener tipos de vehículo:", error);
         setError("Error al cargar los tipos de vehículos");

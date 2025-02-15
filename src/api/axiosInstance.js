@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://a7db-186-155-15-36.ngrok-free.app/api/", // La base para todas las rutas
+  baseURL: "https://815f-186-155-15-36.ngrok-free.app/api/", // La base para todas las rutas
   timeout: 5000,
   headers: {
     "Content-Type": "application/json",
